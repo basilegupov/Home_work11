@@ -197,10 +197,11 @@ if __name__ == "__main__":
 
     # Посторінковий вивід
     numb_page = 1
-    for batch in book.iterator(page_size=2):
+    for batch in book.iterator(page_size=1):
+        print(f'page {numb_page}')
         for record in batch:
             print(record)
-        print(f'page {numb_page}')
+
         numb_page += 1
 
     # Видалення запису Jane
